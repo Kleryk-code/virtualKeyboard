@@ -1,2 +1,2 @@
 #Virtual Keyboard
-https://kleryk-code.github.io/virtualKeyboard/src/
+https://Kleryk-code.github.io/virtualKeyboard/src/
