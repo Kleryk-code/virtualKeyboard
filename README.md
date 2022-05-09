@@ -1,2 +1,2 @@
 #Virtual Keyboard
-https://rolling-scopes-school.github.io/kleryk-code/virtualKeyboard/src/
+https://Kleryk-code.github.io/virtualKeyboard/src/
