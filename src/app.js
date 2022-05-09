@@ -17,24 +17,20 @@ const Keyboard = {
   },
 
   init() {
-    // Создание главного элемента
     this.elements.main = document.createElement('div');
     this.elements.container = document.createElement('div');
     this.elements.textField = document.createElement('textarea');
 
-    // Настройка главного элемента
     this.elements.main.classList.add('keyboard');
     this.elements.container.classList.add('keys');
     this.elements.textField.classList.add('text__window');
     this.elements.container.appendChild(this.createKeys());
     this.elements.keys = this.elements.container.querySelectorAll('.keyDown');
 
-    // Добавление в DOM
     this.elements.main.appendChild(this.elements.container);
     document.body.appendChild(this.elements.textField);
     document.body.appendChild(this.elements.main);
 
-    // Установка текущего значения textArea
     const textArea = document.querySelector('.text__window');
     textArea.addEventListener('focus', () => {
       this.open(textArea.value, (currentValue) => {
@@ -639,45 +635,3 @@ const Keyboard = {
 window.addEventListener('DOMContentLoaded', () => {
   Keyboard.init();
 });
-
-// function runOnKeys(func, ...codes) {
-//   const pressed = new Set();
-
-//   document.addEventListener('keydown', (event) => {
-//     pressed.add(event.code);
-
-//     for (const code of codes) {
-//       if (!pressed.has(code)) {
-//         return;
-//       }
-//     }
-
-//     pressed.clear();
-
-//     func();
-//   });
-
-//   document.addEventListener('keyup', (event) => {
-//     pressed.delete(event.code);
-//   });
-// }
-
-// runOnKeys(
-//   () => {
-//     Keyboard.properties.lang === 'eng' ? Keyboard.properties.lang = 'ru' : Keyboard.properties.lang = 'eng';
-//     console.log(Keyboard.properties.lang);
-//     Keyboard.createElement();
-//   },
-//   'KeyQ',
-//   'KeyW',
-// );
-
-// document.onkeydown = function(event) {
-//   console.log(event.charCode)
-// }
-// document.onkeydown = function(event) {
-//   console.log(event);
-//   keyboardList.push(event.code)
-//   console.log(event.key)
-
-// }
